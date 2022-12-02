@@ -1,13 +1,10 @@
-import Portfolio from './sections/portfolio';
-// 1. import `ChakraProvider` component
-import { ChakraProvider } from '@chakra-ui/react';
-import Navbar from './sections/navbar';
+import About from './about';
+import Contact from './contact';
+import Project from './project';
+import NavTabs from './navbar';
 import { useState } from 'react';
-import Project from './sections/project';
-import Contact from './sections/contact';
-import About from './sections/about';
 
-function App() {
+function Portfolio() {
   const [currentPage, setCurrentPage] = useState('Home');
 
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
@@ -24,12 +21,13 @@ function App() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <ChakraProvider>
-      <Navbar />
-      <Portfolio />
+    <div>
+      {/* We are passing the currentPage from state and the function to update it */}
+      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+      {/* Here we are calling the renderPage method which will return a component  */}
       {renderPage()}
-    </ChakraProvider>
+    </div>
   );
 }
 
-export default App;
+export default Portfolio;
