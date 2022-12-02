@@ -25,8 +25,7 @@ function App() {
 
   return (
     <ChakraProvider>
-      <Navbar />
-      <Portfolio />
+      <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
       {renderPage()}
     </ChakraProvider>
   );
