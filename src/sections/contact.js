@@ -1,11 +1,12 @@
 import {
+  Center,
   FormControl,
   FormLabel,
   Input,
   FormHelperText,
   FormErrorMessage,
+  Textarea,
   useToast,
-  Flex,
   Button,
 } from '@chakra-ui/react';
 
@@ -14,40 +15,55 @@ import { useState } from 'react';
 function Contact() {
   const [input, setInput] = useState('');
 
+  const toast = useToast();
+  const status = ['success', 'error'];
+
   const handleInputChange = (e) => setInput(e.target.value);
 
   const isError = input === '';
 
-  const toast = useToast();
   return (
-    <Flex height='80vh' width='100vw' centerContent margin='20'>
-      <FormControl isInvalid={isError} isRequired>
+    <Center>
+      <FormControl isRequired margin='200'>
         <FormLabel>name</FormLabel>
-        <Input placeholder='Your Name' />
+        <Input placeholder='Please Enter your name name' />
         <FormLabel>Email</FormLabel>
-        <Input type='email' value={input} onChange={handleInputChange} />
+        <Input
+          isInvalid={isError}
+          type='email'
+          placeholder='Please your email'
+          value={input}
+          onChange={handleInputChange}
+        />
         {!isError ? (
-          <FormHelperText>Please enter your email!</FormHelperText>
+          <FormHelperText>Please enter a valid email.</FormHelperText>
         ) : (
           <FormErrorMessage>Email is required.</FormErrorMessage>
         )}
         <FormLabel>Message</FormLabel>
-        <Input placeholder='Your message here' />
+        <Textarea
+          placeholder='Please enter your message!'
+          width='100%'
+          height='300px'
+        />
+        <Button
+          marginTop='5'
+          size='lg'
+          type='submit'
+          onClick={() =>
+            toast({
+              title: 'Message submited',
+              description: 'Your message has been submitted',
+              status: 'success',
+              duration: 9000,
+              isClosable: true,
+            })
+          }
+        >
+          Show Toast
+        </Button>
       </FormControl>
-      <Button
-        onClick={() =>
-          toast({
-            title: 'Message submitted!',
-            description: 'Thank you!',
-            status: 'success',
-            duration: 9000,
-            isClosable: true,
-          })
-        }
-      >
-        Show Toast
-      </Button>
-    </Flex>
+    </Center>
   );
 }
 
