@@ -3,15 +3,17 @@ import { Grid, GridItem } from '@chakra-ui/react';
 function Project() {
   return (
     <Grid
-      h='200px'
-      templateRows='repeat(2, 1fr)'
+      h='80vh'
+      templateRows='repeat(3, 1fr)'
       templateColumns='repeat(5, 1fr)'
       gap={4}
     >
-      <GridItem rowSpan={2} colSpan={1} bg='tomato' />
+      <GridItem rowSpan={3} colSpan={1} bg='tomato' />
       <GridItem colSpan={2} bg='papayawhip' />
       <GridItem colSpan={2} bg='papayawhip' />
       <GridItem colSpan={4} bg='tomato' />
+      <GridItem colSpan={2} bg='papayawhip' />
+      <GridItem colSpan={2} bg='papayawhip' />
     </Grid>
   );
 }

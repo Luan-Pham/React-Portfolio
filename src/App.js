@@ -1,11 +1,9 @@
-import Portfolio from './sections/portfolio';
-// 1. import `ChakraProvider` component
 import { ChakraProvider } from '@chakra-ui/react';
-import Navbar from './sections/navbar';
+import Navbar from './sections/Navbar';
 import { useState } from 'react';
-import Project from './sections/project';
-import Contact from './sections/contact';
-import About from './sections/about';
+import Project from './sections/Projects';
+import Contact from './sections/Contact';
+import About from './sections/About';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('Home');

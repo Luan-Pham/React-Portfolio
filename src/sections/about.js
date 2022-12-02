@@ -1,29 +1,45 @@
 import {
-  Stack,
+  Flex,
+  Spacer,
   Image,
   Text,
   Card,
   CardHeader,
   CardBody,
   Heading,
+  Box,
 } from '@chakra-ui/react';
 import headshot from '../assets/headshot.jpeg';
 
 function About() {
   return (
-    <Stack direction={['column', 'row']} spacing='24px'>
-      <Image
-        borderRadius='full'
-        boxSize='500px'
-        src={headshot}
-        alt='Luan Pham'
-      />
-      <Card>
+    <Flex
+      centerContent
+      textAlign='center'
+      display='flex'
+      justifyContent='space-between'
+    >
+      <Box margin='50'>
+        <Image
+          borderRadius='50%'
+          src={headshot}
+          alt='Luan Pham'
+          boxShadow='dark-lg'
+        />
+      </Box>
+
+      <Card
+        margin='50'
+        bgColor='#01A7C2'
+        textColor='#EAEBED'
+        fontSize='3xl'
+        variant='filled'
+      >
         <CardHeader>
           <Heading size='lg'>About Me</Heading>
         </CardHeader>
         <CardBody>
-          <Text fontSize='3xl'>
+          <Text>
             My name is Luan Pham and I am an aspiring web developer. I graduated
             from UC Davis in 2016 with a degree in Exercise Biology. Afterwards,
             I studied physical therapy and have been working in the field ever
@@ -36,7 +52,7 @@ function About() {
           </Text>
         </CardBody>
       </Card>
-    </Stack>
+    </Flex>
   );
 }
 
