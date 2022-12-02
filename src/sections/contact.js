@@ -36,9 +36,9 @@ function Contact() {
           onChange={handleInputChange}
         />
         {!isError ? (
-          <FormHelperText>Please enter a valid email.</FormHelperText>
+          <FormHelperText></FormHelperText>
         ) : (
-          <FormErrorMessage>Email is required.</FormErrorMessage>
+          <FormErrorMessage>Please enter a valid email.</FormErrorMessage>
         )}
         <FormLabel>Message</FormLabel>
         <Textarea
