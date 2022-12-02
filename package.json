@@ -1,7 +1,7 @@
 {
   "name": "luan-pham-portfolio",
   "version": "0.1.0",
-  "homepage": "https://luan-pham.github.io/React-Portfolio/",
+  "homepage": "https://luan-pham.github.io/React-Portfolio",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.0.13",

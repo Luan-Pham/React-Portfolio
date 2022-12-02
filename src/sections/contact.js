@@ -16,7 +16,6 @@ function Contact() {
   const [input, setInput] = useState('');
 
   const toast = useToast();
-  const status = ['success', 'error'];
 
   const handleInputChange = (e) => setInput(e.target.value);
 
