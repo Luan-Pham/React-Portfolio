@@ -43,7 +43,7 @@ function About() {
         </CardHeader>
         <Center>
           <CardBody>
-            <Text letterSpacing={2} lineHeight='2.5' overflowWrap='break-word'>
+            <Text letterSpacing={2} overflowWrap='break-word'>
               My name is Luan Pham and I am an aspiring web developer. I
               graduated from UC Davis in 2016 with a degree in Exercise Biology.
               Afterwards, I studied physical therapy and have been working in
