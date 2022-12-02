@@ -20,7 +20,7 @@ function Contact() {
 
   const toast = useToast();
   return (
-    <Flex height='80vh' width='50vw' centerContent margin='20'>
+    <Flex height='80vh' width='100vw' centerContent margin='20'>
       <FormControl isInvalid={isError} isRequired>
         <FormLabel>name</FormLabel>
         <Input placeholder='Your Name' />

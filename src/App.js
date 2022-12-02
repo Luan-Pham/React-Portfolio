@@ -5,6 +5,7 @@ import Project from './sections/Projects';
 import Contact from './sections/Contact';
 import About from './sections/About';
 import Resume from './sections/Resume';
+import Footer from './sections/Footer';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -30,6 +31,7 @@ function App() {
       <Box height='100vh' width='100vw' justifyContent='center'>
         <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
         {renderPage()}
+        <Footer />
       </Box>
     </ChakraProvider>
   );
