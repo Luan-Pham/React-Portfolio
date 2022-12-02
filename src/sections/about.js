@@ -1,6 +1,5 @@
 import {
   Flex,
-  Spacer,
   Image,
   Text,
   Card,
@@ -9,7 +8,7 @@ import {
   Heading,
   Box,
 } from '@chakra-ui/react';
-import headshot from '../assets/headshot.jpeg';
+import headshot from '../assets/Headshot.jpeg';
 
 function About() {
   return (

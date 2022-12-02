@@ -5,7 +5,7 @@ function Navbar({ currentPage, handlePageChange }) {
     <Tabs
       isFitted
       align='center'
-      defaultIndex={1}
+      defaultIndex={0}
       size='lg'
       variant='soft-rounded'
       colorScheme='linkedin'
