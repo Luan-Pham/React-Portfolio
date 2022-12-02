@@ -4,7 +4,7 @@ Luan Pham
 
 - [Content](#Content)
 - [Screenshots](#Screenshots)
-- [Tools](#Tools]
+- [Tools](#Tools)
 - [Contact](#Contact)
 
 ##Content
