@@ -10,10 +10,10 @@ function Navbar({ currentPage, handlePageChange }) {
       variant='soft-rounded'
       colorScheme='linkedin'
     >
-      <TabList>
+      <TabList height='5vh'>
         <Tab onClick={() => handlePageChange('About')}>Home</Tab>
-        <Tab onClick={() => handlePageChange('Contact')}>Contact</Tab>
         <Tab onClick={() => handlePageChange('Project')}>Projects</Tab>
+        <Tab onClick={() => handlePageChange('Contact')}>Contact</Tab>
         <Tab onClick={() => handlePageChange('Resume')}>Resume</Tab>
       </TabList>
     </Tabs>

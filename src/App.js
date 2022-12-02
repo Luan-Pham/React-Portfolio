@@ -1,9 +1,10 @@
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, Box } from '@chakra-ui/react';
 import Navbar from './sections/Navbar';
 import { useState } from 'react';
 import Project from './sections/Projects';
 import Contact from './sections/Contact';
 import About from './sections/About';
+import Resume from './sections/Resume';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -16,6 +17,9 @@ function App() {
     if (currentPage === 'Contact') {
       return <Contact />;
     }
+    if (currentPage === 'Resume') {
+      return <Resume />;
+    }
     return <About />;
   };
 
@@ -23,8 +27,10 @@ function App() {
 
   return (
     <ChakraProvider>
-      <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
-      {renderPage()}
+      <Box height='100vh' width='100vw' justifyContent='center'>
+        <Navbar currentPage={currentPage} handlePageChange={handlePageChange} />
+        {renderPage()}
+      </Box>
     </ChakraProvider>
   );
 }
