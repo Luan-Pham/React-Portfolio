@@ -10,6 +10,7 @@ import Security from '../assets/Password.jpg';
 function Project() {
   return (
     <Grid
+      width='100vw'
       margin='50'
       padding='50'
       h='80vh'

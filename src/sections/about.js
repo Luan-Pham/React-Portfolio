@@ -14,6 +14,7 @@ import headshot from '../assets/Headshot.jpeg';
 function About() {
   return (
     <Flex
+      width='100vw'
       height='80vh'
       centerContent
       textAlign='center'

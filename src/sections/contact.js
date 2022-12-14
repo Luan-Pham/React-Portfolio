@@ -22,7 +22,7 @@ function Contact() {
   const isError = input === '';
 
   return (
-    <Center>
+    <Center width='100vw'>
       <FormControl isRequired margin='200'>
         <FormLabel>name</FormLabel>
         <Input placeholder='Please Enter your name name' />
